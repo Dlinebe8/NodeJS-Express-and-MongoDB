@@ -5,8 +5,9 @@ const campsiteRouter = express.Router();
 
 campsiteRouter.use(bodyParser.json());
 
-campsiteRouter.route('/campsites').all((req, res, next) => {
+campsiteRouter.route('/').all((req, res, next) => {
     res.statusCode = 200;
+    console.log("git")
     res.setHeader('Content-Type', 'text/plain');
     next();
 })
